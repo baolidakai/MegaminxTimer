@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2337ED341CE19263008E06F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2337ED331CE19263008E06F9 /* AppDelegate.swift */; };
+		2337ED361CE19263008E06F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2337ED351CE19263008E06F9 /* ViewController.swift */; };
+		2337ED391CE19263008E06F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2337ED371CE19263008E06F9 /* Main.storyboard */; };
+		2337ED3B1CE19263008E06F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2337ED3A1CE19263008E06F9 /* Assets.xcassets */; };
+		2337ED3E1CE19263008E06F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2337ED3C1CE19263008E06F9 /* LaunchScreen.storyboard */; };
+		2337ED491CE19263008E06F9 /* MegaminxTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2337ED481CE19263008E06F9 /* MegaminxTimerTests.swift */; };
+		2337ED541CE19263008E06F9 /* MegaminxTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2337ED531CE19263008E06F9 /* MegaminxTimerUITests.swift */; };
+		23DFE5531CE2E9C100BDDDAE /* eight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 23DFE5511CE2E9C100BDDDAE /* eight.mp3 */; };
+		23DFE5541CE2E9C100BDDDAE /* twelve.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 23DFE5521CE2E9C100BDDDAE /* twelve.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2337ED451CE19263008E06F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2337ED281CE19263008E06F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2337ED2F1CE19263008E06F9;
+			remoteInfo = MegaminxTimer;
+		};
+		2337ED501CE19263008E06F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2337ED281CE19263008E06F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2337ED2F1CE19263008E06F9;
+			remoteInfo = MegaminxTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2337ED301CE19263008E06F9 /* MegaminxTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaminxTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2337ED331CE19263008E06F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2337ED351CE19263008E06F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2337ED381CE19263008E06F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2337ED3A1CE19263008E06F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2337ED3D1CE19263008E06F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2337ED3F1CE19263008E06F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2337ED441CE19263008E06F9 /* MegaminxTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegaminxTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2337ED481CE19263008E06F9 /* MegaminxTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaminxTimerTests.swift; sourceTree = "<group>"; };
+		2337ED4A1CE19263008E06F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2337ED4F1CE19263008E06F9 /* MegaminxTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegaminxTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2337ED531CE19263008E06F9 /* MegaminxTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaminxTimerUITests.swift; sourceTree = "<group>"; };
+		2337ED551CE19263008E06F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23DFE5511CE2E9C100BDDDAE /* eight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eight.mp3; sourceTree = "<group>"; };
+		23DFE5521CE2E9C100BDDDAE /* twelve.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twelve.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2337ED2D1CE19263008E06F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2337ED411CE19263008E06F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2337ED4C1CE19263008E06F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2337ED271CE19263008E06F9 = {
+			isa = PBXGroup;
+			children = (
+				2337ED321CE19263008E06F9 /* MegaminxTimer */,
+				2337ED471CE19263008E06F9 /* MegaminxTimerTests */,
+				2337ED521CE19263008E06F9 /* MegaminxTimerUITests */,
+				2337ED311CE19263008E06F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2337ED311CE19263008E06F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2337ED301CE19263008E06F9 /* MegaminxTimer.app */,
+				2337ED441CE19263008E06F9 /* MegaminxTimerTests.xctest */,
+				2337ED4F1CE19263008E06F9 /* MegaminxTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2337ED321CE19263008E06F9 /* MegaminxTimer */ = {
+			isa = PBXGroup;
+			children = (
+				23DFE5511CE2E9C100BDDDAE /* eight.mp3 */,
+				23DFE5521CE2E9C100BDDDAE /* twelve.mp3 */,
+				2337ED331CE19263008E06F9 /* AppDelegate.swift */,
+				2337ED351CE19263008E06F9 /* ViewController.swift */,
+				2337ED371CE19263008E06F9 /* Main.storyboard */,
+				2337ED3A1CE19263008E06F9 /* Assets.xcassets */,
+				2337ED3C1CE19263008E06F9 /* LaunchScreen.storyboard */,
+				2337ED3F1CE19263008E06F9 /* Info.plist */,
+			);
+			path = MegaminxTimer;
+			sourceTree = "<group>";
+		};
+		2337ED471CE19263008E06F9 /* MegaminxTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2337ED481CE19263008E06F9 /* MegaminxTimerTests.swift */,
+				2337ED4A1CE19263008E06F9 /* Info.plist */,
+			);
+			path = MegaminxTimerTests;
+			sourceTree = "<group>";
+		};
+		2337ED521CE19263008E06F9 /* MegaminxTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2337ED531CE19263008E06F9 /* MegaminxTimerUITests.swift */,
+				2337ED551CE19263008E06F9 /* Info.plist */,
+			);
+			path = MegaminxTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2337ED2F1CE19263008E06F9 /* MegaminxTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2337ED581CE19263008E06F9 /* Build configuration list for PBXNativeTarget "MegaminxTimer" */;
+			buildPhases = (
+				2337ED2C1CE19263008E06F9 /* Sources */,
+				2337ED2D1CE19263008E06F9 /* Frameworks */,
+				2337ED2E1CE19263008E06F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MegaminxTimer;
+			productName = MegaminxTimer;
+			productReference = 2337ED301CE19263008E06F9 /* MegaminxTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2337ED431CE19263008E06F9 /* MegaminxTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2337ED5B1CE19263008E06F9 /* Build configuration list for PBXNativeTarget "MegaminxTimerTests" */;
+			buildPhases = (
+				2337ED401CE19263008E06F9 /* Sources */,
+				2337ED411CE19263008E06F9 /* Frameworks */,
+				2337ED421CE19263008E06F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2337ED461CE19263008E06F9 /* PBXTargetDependency */,
+			);
+			name = MegaminxTimerTests;
+			productName = MegaminxTimerTests;
+			productReference = 2337ED441CE19263008E06F9 /* MegaminxTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2337ED4E1CE19263008E06F9 /* MegaminxTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2337ED5E1CE19263008E06F9 /* Build configuration list for PBXNativeTarget "MegaminxTimerUITests" */;
+			buildPhases = (
+				2337ED4B1CE19263008E06F9 /* Sources */,
+				2337ED4C1CE19263008E06F9 /* Frameworks */,
+				2337ED4D1CE19263008E06F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2337ED511CE19263008E06F9 /* PBXTargetDependency */,
+			);
+			name = MegaminxTimerUITests;
+			productName = MegaminxTimerUITests;
+			productReference = 2337ED4F1CE19263008E06F9 /* MegaminxTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2337ED281CE19263008E06F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = bowendeng;
+				TargetAttributes = {
+					2337ED2F1CE19263008E06F9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 58GCW3QJX9;
+					};
+					2337ED431CE19263008E06F9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2337ED2F1CE19263008E06F9;
+					};
+					2337ED4E1CE19263008E06F9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2337ED2F1CE19263008E06F9;
+					};
+				};
+			};
+			buildConfigurationList = 2337ED2B1CE19263008E06F9 /* Build configuration list for PBXProject "MegaminxTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2337ED271CE19263008E06F9;
+			productRefGroup = 2337ED311CE19263008E06F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2337ED2F1CE19263008E06F9 /* MegaminxTimer */,
+				2337ED431CE19263008E06F9 /* MegaminxTimerTests */,
+				2337ED4E1CE19263008E06F9 /* MegaminxTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2337ED2E1CE19263008E06F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2337ED3E1CE19263008E06F9 /* LaunchScreen.storyboard in Resources */,
+				23DFE5531CE2E9C100BDDDAE /* eight.mp3 in Resources */,
+				2337ED3B1CE19263008E06F9 /* Assets.xcassets in Resources */,
+				2337ED391CE19263008E06F9 /* Main.storyboard in Resources */,
+				23DFE5541CE2E9C100BDDDAE /* twelve.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2337ED421CE19263008E06F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2337ED4D1CE19263008E06F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2337ED2C1CE19263008E06F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2337ED361CE19263008E06F9 /* ViewController.swift in Sources */,
+				2337ED341CE19263008E06F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2337ED401CE19263008E06F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2337ED491CE19263008E06F9 /* MegaminxTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2337ED4B1CE19263008E06F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2337ED541CE19263008E06F9 /* MegaminxTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2337ED461CE19263008E06F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2337ED2F1CE19263008E06F9 /* MegaminxTimer */;
+			targetProxy = 2337ED451CE19263008E06F9 /* PBXContainerItemProxy */;
+		};
+		2337ED511CE19263008E06F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2337ED2F1CE19263008E06F9 /* MegaminxTimer */;
+			targetProxy = 2337ED501CE19263008E06F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2337ED371CE19263008E06F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2337ED381CE19263008E06F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2337ED3C1CE19263008E06F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2337ED3D1CE19263008E06F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2337ED561CE19263008E06F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2337ED571CE19263008E06F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2337ED591CE19263008E06F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MegaminxTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.corp.mtv.bowendeng0.MegaminxTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		2337ED5A1CE19263008E06F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MegaminxTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.corp.mtv.bowendeng0.MegaminxTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		2337ED5C1CE19263008E06F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MegaminxTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.corp.mtv.bowendeng0.MegaminxTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MegaminxTimer.app/MegaminxTimer";
+			};
+			name = Debug;
+		};
+		2337ED5D1CE19263008E06F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MegaminxTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.corp.mtv.bowendeng0.MegaminxTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MegaminxTimer.app/MegaminxTimer";
+			};
+			name = Release;
+		};
+		2337ED5F1CE19263008E06F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MegaminxTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.corp.mtv.bowendeng0.MegaminxTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MegaminxTimer;
+			};
+			name = Debug;
+		};
+		2337ED601CE19263008E06F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MegaminxTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.corp.mtv.bowendeng0.MegaminxTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MegaminxTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2337ED2B1CE19263008E06F9 /* Build configuration list for PBXProject "MegaminxTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2337ED561CE19263008E06F9 /* Debug */,
+				2337ED571CE19263008E06F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2337ED581CE19263008E06F9 /* Build configuration list for PBXNativeTarget "MegaminxTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2337ED591CE19263008E06F9 /* Debug */,
+				2337ED5A1CE19263008E06F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2337ED5B1CE19263008E06F9 /* Build configuration list for PBXNativeTarget "MegaminxTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2337ED5C1CE19263008E06F9 /* Debug */,
+				2337ED5D1CE19263008E06F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2337ED5E1CE19263008E06F9 /* Build configuration list for PBXNativeTarget "MegaminxTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2337ED5F1CE19263008E06F9 /* Debug */,
+				2337ED601CE19263008E06F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2337ED281CE19263008E06F9 /* Project object */;
+}
