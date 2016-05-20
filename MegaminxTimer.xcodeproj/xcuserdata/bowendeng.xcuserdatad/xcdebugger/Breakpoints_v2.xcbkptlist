@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MegaminxTimer/ViewController.swift"
-            timestampString = "484633239.348503"
+            timestampString = "485474755.842932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "generateScramble()"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "updateResults()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

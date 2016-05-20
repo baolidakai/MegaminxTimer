@@ -11,7 +11,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 	// The state:
 	// 0 - DNS or finish solving
 	// 1 - during inspection
@@ -23,6 +23,8 @@ class ViewController: UIViewController {
 	var endTime = NSDate()
 	var experimentId = 0
 	var times = [Double]()
+	var pickerData: [String] = [String]()
+    var Event: String!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -34,6 +36,11 @@ class ViewController: UIViewController {
 		} catch {
 			print("Sound file not successfully loaded!")
 		}
+		// Setup the picker options
+		self.EventPicker.delegate = self
+		self.EventPicker.dataSource = self
+		pickerData = ["Megaminx", "5x5", "4x4"]
+        Event = pickerData[0]
 		generateScramble()
 	}
 
@@ -42,12 +49,34 @@ class ViewController: UIViewController {
 	@IBOutlet weak var NumOfSolves: UILabel!
 	@IBOutlet weak var BestSingle: UILabel!
 	@IBOutlet weak var TrimmedMean: UILabel!
+    @IBOutlet weak var EventPicker: UIPickerView!
+
+	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+		return 1
+	}
+
+	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return pickerData.count
+	}
+
+	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return pickerData[row]
+	}
+
+	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		// http://codewithchris.com/uipickerview-example/
+		// This method is triggered whenever the user makes a change to the picker selection.
+		// The parameter named row and component represents what was selected.
+        Event = pickerData[row]
+        Reset()
+        generateScramble()
+	}
 
 	@IBAction func ButtonPressed(sender: UIButton) {
 		if (State == 0) {
 			State = 1
+			let currExperimentId = experimentId
 			for sec in 0...15 {
-				let currExperimentId = experimentId
 				delay(Double(sec)) {
 					if (self.State == 1 && self.experimentId == currExperimentId) {
 						self.ButtonText.setTitle(String(15 - sec), forState: .Normal)
@@ -66,8 +95,21 @@ class ViewController: UIViewController {
 			State = 2
 			startTime = NSDate()
 			ButtonText.setTitle("Solving...", forState: .Normal)
-			experimentId += 1
+			let currExperimentId = experimentId
+			for sec in 0...120 {
+				delay(Double(sec)) {
+					if (self.experimentId == currExperimentId) {
+						self.ButtonText.setTitle(self.TimeConverter(Double(sec)), forState: .Normal)
+					}
+				}
+			}
+			delay(121.0) {
+				if (self.experimentId == currExperimentId) {
+					self.ButtonText.setTitle("> 2 minutes", forState: .Normal)
+				}
+			}
 		} else if (State == 2) { // Stop the timer
+			experimentId += 1
 			State = 0
 			endTime = NSDate()
 			var elapsedTime = endTime.timeIntervalSinceDate(startTime)
@@ -101,7 +143,11 @@ class ViewController: UIViewController {
 		}
 	}
 
-	@IBAction func Reset(sender: UIButton) {
+	@IBAction func ResetPressed(sender: UIButton) {
+        Reset()
+    }
+    
+    func Reset() {
 		if State == 0 {
 			times = []
 			updateResults()
@@ -114,6 +160,14 @@ class ViewController: UIViewController {
 	}
 
 	func generateScramble() {
+        if (Event == "Megaminx") {
+            generateScrambleMegaminx()
+        } else {
+            generateScrambleFive()
+        }
+    }
+    
+    func generateScrambleMegaminx() {
 		Scramble.text = ""
 		for _ in 0..<7 {
 			var currLine = ""
@@ -131,6 +185,19 @@ class ViewController: UIViewController {
 			Scramble.text = Scramble.text! + currLine
 		}
 	}
+    
+    func generateScrambleFive() {
+		let symbols = ["R2", "F", "Lw", "B'", "D2", "Dw", "R", "B", "Fw2", "F2", "Rw", "Bw'", "D", "U", "R'", "D'", "L2", "U'", "F'", "Uw2", "Dw2", "Bw", "L'", "Rw2", "B2", "Fw", "Uw'", "Rw'", "Lw'", "Bw2", "Dw'", "Lw2", "L", "Fw'", "U2"]
+        Scramble.text = ""
+		for _ in 0..<6 {
+			var currLine = ""
+			for _ in 0..<10 {
+				currLine += symbols[Int(arc4random_uniform(UInt32(symbols.count)))]
+			}
+			currLine += "\n"
+			Scramble.text = Scramble.text! + currLine
+		}
+    }
 
 	func randomBool() -> Bool {
 		return arc4random_uniform(2) == 0 ? true : false
