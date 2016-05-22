@@ -60,14 +60,29 @@
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQQ-lS-zFO">
                                 <rect key="frame" x="24" y="501" width="556" height="79"/>
                             </pickerView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubZ-9d-HJF">
+                                <rect key="frame" x="531" y="20" width="51" height="31"/>
+                                <connections>
+                                    <action selector="Sound:" destination="BYZ-38-t0r" eventType="valueChanged" id="HBf-DP-ATt"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaU-nI-geB">
+                                <rect key="frame" x="470" y="20" width="53" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JQQ-lS-zFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="HfZ-Qm-dfp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JQQ-lS-zFO" secondAttribute="trailing" id="IZg-TM-el3"/>
+                            <constraint firstItem="ubZ-9d-HJF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZxM-xa-QmG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pz7-FF-V8P" secondAttribute="bottom" constant="20" id="f18-ah-i8H"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Pz7-FF-V8P" secondAttribute="leading" id="hnQ-uc-FMk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pz7-FF-V8P" secondAttribute="trailing" id="k71-N5-WrR"/>
+                            <constraint firstItem="ubZ-9d-HJF" firstAttribute="leading" secondItem="aaU-nI-geB" secondAttribute="trailing" constant="8" id="lDy-j0-TgA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ubZ-9d-HJF" secondAttribute="trailing" id="mY8-Ju-qGw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JQQ-lS-zFO" secondAttribute="bottom" constant="20" id="u8M-f7-lCO"/>
                             <constraint firstItem="Pz7-FF-V8P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yT4-Ga-VPU"/>
                         </constraints>

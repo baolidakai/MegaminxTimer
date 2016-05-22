@@ -25,6 +25,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	var times = [Double]()
 	var pickerData: [String] = [String]()
     var Event: String!
+    var mute = false
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -42,8 +43,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		pickerData = ["Megaminx", "5x5", "4x4"]
         Event = pickerData[0]
 		generateScramble()
+        mute = false
 	}
 
+    @IBAction func Sound(sender: UISwitch) {
+        if sender.on {
+            mute = false
+        } else {
+            mute = true
+        }
+    }
 	@IBOutlet weak var Scramble: UILabel!
 	@IBOutlet weak var ButtonText: UIButton!
 	@IBOutlet weak var NumOfSolves: UILabel!
@@ -68,7 +77,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		// This method is triggered whenever the user makes a change to the picker selection.
 		// The parameter named row and component represents what was selected.
         Event = pickerData[row]
-        Reset()
         generateScramble()
 	}
 
@@ -80,9 +88,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 				delay(Double(sec)) {
 					if (self.State == 1 && self.experimentId == currExperimentId) {
 						self.ButtonText.setTitle(String(15 - sec), forState: .Normal)
-						if (sec == 8) {
+						if (sec == 8 && !self.mute) {
 							self.EightSeconds.play()
-						} else if (sec == 12) {
+						} else if (sec == 12 && !self.mute) {
 							self.TwelveSeconds.play()
 						} else if (sec == 15) {
 							self.ButtonText.setTitle("DNF", forState: .Normal)
