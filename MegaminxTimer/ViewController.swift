@@ -187,12 +187,36 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	}
     
     func generateScrambleFive() {
-		let symbols = ["R2", "F", "Lw", "B'", "D2", "Dw", "R", "B", "Fw2", "F2", "Rw", "Bw'", "D", "U", "R'", "D'", "L2", "U'", "F'", "Uw2", "Dw2", "Bw", "L'", "Rw2", "B2", "Fw", "Uw'", "Rw'", "Lw'", "Bw2", "Dw'", "Lw2", "L", "Fw'", "U2"]
+		// Illegal sequence:
+		// Two moves with same prefix sandwiching moves with same type (same value in the dictionary
+		// e.g. U Dw Uw' U2
+		// U and U2 share the same prefix, and type of Dw Uw' U2 are all 1
+		let prefixes = ["R", "Rw", "L", "Lw", "U", "Uw", "D", "Dw", "F", "Fw", "B", "Bw"]
+		let suffixes = ["", "'", "2"]
+		let typeDictionary: [String: Int] = ["R": 0, "Rw": 0, "L": 0, "Lw": 0, "U": 1, "Uw": 1, "D": 1, "Dw": 1, "F": 2, "Fw": 2, "B": 2, "Bw": 2]
+		var allPrefixes = [String]()
         Scramble.text = ""
 		for _ in 0..<6 {
 			var currLine = ""
 			for _ in 0..<10 {
-				currLine += symbols[Int(arc4random_uniform(UInt32(symbols.count)))]
+				var currPrefix: String!
+				var legal = false
+				while !legal {
+					currPrefix = prefixes[Int(arc4random_uniform(UInt32(prefixes.count)))]
+					// Check if this prefix is good
+					var idx = allPrefixes.count - 1
+					legal = true
+					while idx >= 0 && typeDictionary[allPrefixes[idx]] == typeDictionary[currPrefix] {
+						if allPrefixes[idx] == currPrefix {
+							legal = false
+                            break
+						}
+                        idx -= 1
+					}
+				}
+				allPrefixes.append(currPrefix)
+				let currSuffix = suffixes[Int(arc4random_uniform(UInt32(suffixes.count)))]
+				currLine += currPrefix + currSuffix
 			}
 			currLine += "\n"
 			Scramble.text = Scramble.text! + currLine
